@@ -47,9 +47,9 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    -webkit-box-shadow: 10px 10px 18px -1px rgba(0,0,0,0.64);
-    -moz-box-shadow: 10px 10px 18px -1px rgba(0,0,0,0.64);
-    box-shadow: 10px 10px 18px -1px rgba(0,0,0,0.64);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(255,255,255,1);
+    box-shadow: 10px 10px 5px 0px rgba(255,255,255,1);
 }
 
 .principal h1{
@@ -61,6 +61,10 @@
   text-shadow: 0px 0px 20px black;
   padding-left: 390px;
 
+}
+.principal:hover{
+  -webkit-transform:scale(1.1);transform:scale(1.1);
+  transition: .25s;
 }
 
 
@@ -85,6 +89,7 @@
                 0 20px 20px rgba(0,0,0,.15);
   font-family: Impact;
   font-size: 35px;
+  color: black;
 }
 
 .fila-2 a, .fila-5 a, .fila-6 a{
@@ -94,6 +99,7 @@
 .fila-2 p{
   text-align: justify;
   font-size: 18px;
+  color:white;
 }
 
 .fila-3{
@@ -117,10 +123,11 @@
 
 .fila-4 p{
   text-align: center;
-  font-size: 38px;
-  padding-top: 25px;
+  font-size: 20px;
+  padding-top: 56px;
   padding-left: 10px;xº
   font-family: Impact;
+  color:white;
 }
 
 .fila-4 img:hover{
@@ -137,106 +144,129 @@
 }
 
 .pie{
-  height: 80px;
+  height: 120px;
   background-image: url('https://ugc.kn3.net/i/origin/http://media02.hongkiat.com/photoshop_metal/WireMesh.jpg');
 }
 
 .registro p{
   color: white;
-  padding: 5px;
+ padding-top:25px;
+  padding-right: 20px;
+}
+
+.logo1{
+  float: left;
+  padding-top:30px;
+  padding-left: 20px;
+}
+
+.logo1 h2{
+  color:white;
 }
 
 
 
 
-/*Galeria con modal*/
-.galeria {
-  width: 90%;
-  margin: auto;
-  margin-top: 30px;
-  list-style: none;
-  padding: 20px;
-  box-sizing: border-box;
+#content {
+  text-align:center;
   
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.galeria li {
-  margin: 5px;
-}
-
-.galeria img {
-  width: 150px;
-  height: 100px;
-}
-
-/*Estilos del modal*/
-
-.modal {
-  display: none;
-}
-
-.modal:target {
+  position:absolute;
+  left:0;
+  right:0;
+  margin:auto;
+  padding:120px 0 10px 0;
   
-  display: block;
-  position: fixed;
-  background: rgba(0,0,0,0.8);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width:200px;
+  height:20px;
 }
 
-.modal h3 {
-  color: #fff;
-  font-size: 30px;
-  text-align: center;
-  margin: 15px 0;
+input[type="checkbox"]{display:none;}
+
+.checkbox:checked + .label{
+  background:#C5DCFF;
+  color:blue;
 }
 
-.imagen {
-  width: 100%;
-  height: 50%;
+.checkbox:checked ~ .social {
+  opacity:1;
+  -webkit-transform: scale(1) translateY(-90px);
+  -moz-transform:scale(1) translateY(-90px);
+  -o-transform:scale(1) translateY(-90px);
+  transform:scale(1) translateY(-90px);
+    -webkit-transition:.5s;
+  -moz-transition:.5s;
+  -o-transition:.5s;
+  transition:.5s;
+}
+
+.label {
+  font-size:16px;
+  cursor:pointer;
+  margin:0;
+  margin-top: -50px;
+  padding:5px 5px;
   
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius:10%;
+  color:white;
 }
 
-.imagen a {
-  color: #fff;
-  font-size: 40px;
-  text-decoration: none;
-  margin: 0 10px;
+.social {
+  transform-origin:50% 0%;
+  
+  -webkit-transform: scale(0) translateY(-190px);
+  -moz-transform:scale(0) translateY(-190px);
+  -o-transform:scale(0) translateY(-190px);
+  transform:scale(0) translateY(-190px);
+  
+  opacity:0;
+}
+ul {
+  position:relative;
+  left:0;
+  right:0;
+  margin:auto;
+  color:#fff;
+  height:46px;
+  width:180px;
+  background:#3B5998;
+  padding:0;
+  list-style:none;
 }
 
-.imagen a:nth-child(2) {
-  margin: 0;
-  height: 100%;
-  flex-shrink: 2;
+ul li {
+  font-size:20px;
+  
+  cursor:pointer;
+  width:60px;
+  margin:0;
+  padding:12px 0;
+  text-align:center;
+  float:left;
+  display:block;
+  height:22px;}
+
+ul li:hover {color:rgba(0,0,0,.5);}
+
+ul:after {
+  content:'';
+  display:block;
+  position:absolute;
+  left:0;
+  right:0;
+  margin:35px auto;
+  height:0;
+  width:0;
+  
+  border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    
+    border-top: 20px solid #3B5998;
 }
 
-.imagen img {
-  width: 500px;
-  height: 100%;
-  max-width: 100%;
-  border: 7px solid #fff;
-  box-sizing: border-box;
-}
+li[class*="twitter"] {background:#6CDFEA;padding:12px 0;}
+li[class*="gplus"] {background:#E34429;padding:12px 0;}
 
-.cerrar {
-  display: block;
-  background: #fff;
-  width: 25px;
-  height: 25px;
-  margin: 15px auto;
-  text-align: center;
-  text-decoration: none;
-  font-size: 25px;
-  color: #000;
-  padding: 5px;
-  border-radius: 50%;
-  line-height: 25px;
-}
+
+
+
+
