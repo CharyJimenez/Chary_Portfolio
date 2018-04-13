@@ -38,10 +38,11 @@
 }
 
 .principal{  
-  height: 400px;
+  height: 600px;
   margin-top: 50px;
   border: 1px solid black;
-  background-image: url('https://image.freepik.com/vector-gratis/cuatro-vacios-paginas-de-comic_1017-8315.jpg');
+  border-radius: 15%;
+  background-image: url('../img/autores.jpg');
   background-repeat: no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -53,11 +54,13 @@
 
 .principal h1{
   text-align: center;
-  margin-top: 130px;
+  margin-top: 90px;
   color: white;
   font-family: Arial; 
   font-size: 58px; 
   text-shadow: 0px 0px 20px black;
+  padding-left: 390px;
+
 }
 
 
